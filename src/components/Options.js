@@ -1,7 +1,9 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React from "react";
+import { useQuiz } from "../context/QuizContext";
 
-export default function Options({ question, dispatch, answer }) {
+export default function Options({ question }) {
+
+  const { answer, dispatch } = useQuiz();
   const hasAnswered = answer !== null;
 
   return (
